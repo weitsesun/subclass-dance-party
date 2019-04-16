@@ -14,6 +14,6 @@ makeDancerTwo.prototype.constructor = makeDancerTwo;
 makeDancerTwo.prototype.oldStep = makeDancerTwo.prototype.step;
 makeDancerTwo.prototype.step = function() {
   this.oldStep();
-  this.$node.fadeToggle();
+  this.$node;
 };
   

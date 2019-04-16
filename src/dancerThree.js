@@ -13,6 +13,6 @@ makeDancerThree.prototype.constructor = makeDancerThree;
 makeDancerThree.prototype.oldStep = makeDancerThree.prototype.step;
 makeDancerThree.prototype.step = function() {
   this.oldStep();
-  this.$node.fadeToggle();
+  this.$node;
 };
   
