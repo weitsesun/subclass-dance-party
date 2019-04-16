@@ -29,5 +29,6 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
   });
+  window.dancers.push(dancer);
 });
 
