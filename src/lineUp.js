@@ -5,6 +5,7 @@ $(document).ready(function() {
             window.dancers[i].$node.animate({
                 top : "50px"
             },1000)
+            window.dancers[i].left = i * 100;
             window.dancers[i].setPosition();
         }
     });
