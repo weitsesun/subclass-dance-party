@@ -3,45 +3,47 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url(https://pokelifehacks.com/wp-content/uploads/2016/08/wsi-imageoptim-dEuR1OV.jpg);
+  background-size: cover;
   font-size: 18px;
+  
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: rgb(255, 255, 255);
+  opacity: 1;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, #lineup{
+  font-family: "Arial";
   padding:5px 12px;
-  float:top;
+
 }
 .topbar{
   height:32px;
-  background-color: #555;
+  background-color: rgb(4, 85, 160);
+  opacity: 0.5;
 }
 .title{
-  background-color: #777;
+  opacity: 1;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  content: url(https://media.giphy.com/media/eacSJw7emzl9S/giphy.gif);
+  height: 100px;
   position:absolute;
+  
 }
 
-.dancertwo{
-  /* Animation to spin and move the sphere */
-  -webkit-animation: spin 3000ms linear infinite;
-  -moz-animation: spin 3000ms linear infinite;
-  -ms-animation: spin 3000ms linear infinite;
-  animation: spin 3000ms linear infinite;
-  
-  -webkit-transition: all 3s ease;
-  transition: all 3s ease;
-  
+.dancertwo {
   position: absolute;
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+  animation-iteration-count: infinite;
+  transform: translate3d(0, 0, 0);
+  /* backface-visibility: hidden;
+  perspective: 1000px; */
 }
 
 .dancerthree{
   position:absolute;
-  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+  animation: spin 0.8s cubic-bezier(.36,.07,.19,.97) both;
   animation-iteration-count: infinite;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
@@ -84,4 +86,103 @@ body, a:link, a:visited, a:active{
   }
 }
 
+
+
+/*implemente bounce animation*/
+@-webkit-keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
 

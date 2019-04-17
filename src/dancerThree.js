@@ -2,7 +2,7 @@ var makeDancerThree = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.top = top;
   this.left = left;
-  this.$node = $('<span class="dancerthree"><img src ="https://i.gifer.com/19wG.gif"></span>');
+  this.$node = $('<span class="dancerthree rotate"><img src ="https://i.gifer.com/19wG.gif" height=100px width=auto></span>');
   this.timeBetweenSteps = timeBetweenSteps;
   this.setPosition();
   this.step();
